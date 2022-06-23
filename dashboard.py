@@ -1,9 +1,7 @@
 # Libraries
 import streamlit as st
 import pandas as pd
-git clone https://github.com/geopandas/geopandas.git
-cd geopandas
-pip install .
+pip install git+git://github.com/geopandas/geopandas.git
 import geopandas as gpd
 from geopandas import GeoDataFrame
 import matplotlib.pyplot as plt
