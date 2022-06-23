@@ -1,6 +1,7 @@
 # Libraries
 import streamlit as st
 import pandas as pd
+!pip install geopandas
 import geopandas as gpd
 from geopandas import GeoDataFrame
 import matplotlib.pyplot as plt
