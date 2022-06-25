@@ -11,13 +11,14 @@ import plotly.express as px
 
 
 # Loading Data
-data = gpd.read_file('/content/drive/MyDrive/GFW/Geo_Perda_florestal_Estados.gpkg')
-data_drivers = pd.read_csv('/content/drive/MyDrive/GFW/Dominant_Drivers.csv')
+data = pd.read_csv('/datasets/Perda_Florestal.csv')
+data_drivers = pd.read_csv('/datasets/Dominant_Drivers.csv')
+geo_data = gpd.read_file('/datasets/Geo_Estados.gpkg')
 
 #Loading Geo Estados
 geometry = []
 for g in range(27):
-  geo = data.loc[g:g,'geometry'].to_json()
+  geo = geo_data.loc[g:g,'geometry'].to_json()
   #geo = geo.split(':')[8]
   #geo = geo.split('"')[0]
   #geo = geo.split('}')[0]
@@ -47,7 +48,8 @@ col1,col2 = st.columns([2,1])
 year = 0
 for i in years:
   if side_year == i:
-    data_year = data.loc[data['year'] == i].reset_index(drop=True)
+    data_y = data.loc[data['year'] == i].reset_index(drop=True)
+    data_year = geo_data.merge(data_y,on = 'id')
     year = i
 
 with col1:
