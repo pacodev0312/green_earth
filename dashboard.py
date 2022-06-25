@@ -129,7 +129,7 @@ labels=['Commodities','Agricultura Itinerante','Floresta','Queimadas','Urbaniza√
 sizes = [commodities,itinerant,floresta,queimadas,urbanizacao]
 
 fig5, ax5 = plt.subplots()
-ax5.pie(sizes, labels=labels, autopct='%1.1f%%',shadow=False, startangle=90,cmap='PuRd')
+ax5.pie(sizes, labels=labels, autopct='%1.1f%%',shadow=False, startangle=90,colors='PuRd')
 ax5.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig5)
 
