@@ -12,8 +12,8 @@ import plotly.express as px
 
 # Loading Data
 data = pd.read_csv('datasets/Perda_Florestal.csv')
-data_drivers = pd.read_csv('/datasets/Dominant_Drivers.csv')
-geo_data = gpd.read_file('/datasets/Geo_Estados.gpkg')
+data_drivers = pd.read_csv('datasets/Dominant_Drivers.csv')
+geo_data = gpd.read_file('datasets/Geo_Estados.gpkg')
 
 #Loading Geo Estados
 geometry = []
