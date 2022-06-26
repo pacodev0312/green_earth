@@ -124,7 +124,7 @@ floresta = drivers.loc[3].values[0]
 queimadas = drivers.loc[4].values[0]
 urbanizacao = drivers.loc[5].values[0]
 
-labels=['Commodities','Agricultura Itinerante','Floresta','Queimadas','Urbanização']
+labels=['Commodities','Agricultura Itinerante','','','']
 sizes = [commodities,itinerant,floresta,queimadas,urbanizacao]
 colors = ['#980043','#dd1c77','#df65b0','#c994c7','#d4b9da']
 
