@@ -118,21 +118,19 @@ with st.expander ('Perda Florestal Brasileira ao longo dos Anos') :
 # Creating Chart By Dominant Driver:
 drivers = data_drivers.loc[data_drivers['year'] == year,['dominant_driver','area_ha']].groupby('dominant_driver').sum()
 
-#area_drivers_total = drivers['area_ha'].sum()
 commodities = drivers.loc[1]
-st.write(commodities)
-#itinerant = drivers.loc[drivers['dominant_driver'] == 2,'area_ha']
-#floresta = drivers.loc[drivers['dominant_driver'] == 3,'area_ha']
-#queimadas = drivers.loc[drivers['dominant_driver'] == 4,'area_ha']
-#urbanizacao = drivers.loc[drivers['dominant_driver'] == 5,'area_ha']
+itinerant = drivers.loc[2]
+floresta = drivers.loc[3]
+queimadas = drivers.loc[4]
+urbanizacao = drivers.loc[5]
 
-#labels=['Commodities','Agricultura Itinerante','Floresta','Queimadas','Urbanização']
-#sizes = [commodities,itinerant,floresta,queimadas,urbanizacao]
+labels=['Commodities','Agricultura Itinerante','Floresta','Queimadas','Urbanização']
+sizes = [commodities,itinerant,floresta,queimadas,urbanizacao]
 
-#fig5, ax5 = plt.subplots()
-#ax5.pie(sizes, labels=labels, autopct='%1.1f%%',shadow=False, startangle=90,colors='PuRd')
-#ax5.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-#st.pyplot(fig5)
+fig5, ax5 = plt.subplots()
+ax5.pie(sizes, labels=labels, autopct='%1.1f%%',shadow=False, startangle=90,colors='PuRd')
+ax5.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+st.pyplot(fig5)
 
 #labels = data_drivers['year'].unique().tolist()
 #commodities = 
