@@ -135,7 +135,7 @@ col1_2, col2_1 =  st.columns([2,1])
 
 with col1_2:
   with st.expander ('Principais Causas de Perda Florestal') :
-    st.write(year)
+    st.text(year)
     st.write(fig5)
 
 with col2_1:
@@ -170,7 +170,7 @@ else:
     st.text('')
     st.text('')
     st.write('Area de Perda Florestal:')
-    st.write(str(year))
+    st.text(year)
     area_estado = data_year['area_ha'].loc[data_year['nome'] == estado].values[0]
     st.write(area_estado)
 
