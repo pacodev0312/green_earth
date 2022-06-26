@@ -33,7 +33,7 @@ side_year = st.sidebar.selectbox('Ano', years, index=default_year)
 
 
 # -- Estados
-estados = ['<select>','Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal',
+estados = ['Selecione','Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal',
 'Espírito Santo','Goiás','Maranhão','Mato Grosso','Mato Grosso do Sul','Minas Gerais','Pará',
 'Paraíba','Paraná','Pernambuco','Piauí','Rio de Janeiro','Rio Grande do Norte','Rio Grande do Sul',
 'Rondônia','Roraima','Santa Catarina','São Paulo','Sergipe','Tocantins'
@@ -154,7 +154,7 @@ for i in estados:
 
 col3,col4 = st.columns([2,1])
 
-if estado == '<select>':
+if estado == 'Selecione':
     st.write('')
 else:
   with col3:
