@@ -119,7 +119,7 @@ with st.expander ('Perda Florestal Brasileira ao longo dos Anos') :
 drivers = data_drivers.loc[data_drivers['year'] == year,['dominant_driver','area_ha']].groupby('dominant_driver').sum()
 
 #area_drivers_total = drivers['area_ha'].sum()
-commodities = drivers[0]
+commodities = drivers.loc[0]
 st.write(commodities)
 #itinerant = drivers.loc[drivers['dominant_driver'] == 2,'area_ha']
 #floresta = drivers.loc[drivers['dominant_driver'] == 3,'area_ha']
