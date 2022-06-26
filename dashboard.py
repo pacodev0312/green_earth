@@ -121,6 +121,7 @@ drivers = data_drivers.loc[data_drivers['year'] == year]
 #area_drivers_total = drivers['area_ha'].sum()
 commodities = drivers.loc[drivers['dominant_driver'] == 1,'area_ha']
 st.write(data_drivers.loc[data_drivers['year'] == 2020])
+st.write(drivers.groupby('dominant_driver').sum())
 #itinerant = drivers.loc[drivers['dominant_driver'] == 2,'area_ha']
 #floresta = drivers.loc[drivers['dominant_driver'] == 3,'area_ha']
 #queimadas = drivers.loc[drivers['dominant_driver'] == 4,'area_ha']
