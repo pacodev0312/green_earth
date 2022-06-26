@@ -137,8 +137,8 @@ with col1_2:
   with st.expander ('Principais Causas de Perda Florestal') :
     st.text(year)
     st.write(fig5)
-    st.text('1 - Commodities             4 - Queimadas')
-    st.text('2 - Agricultura Itinerante  5 - Urbanização ')
+    st.text('1 - Commodities               4 - Queimadas')
+    st.text('2 - Agricultura Itinerante    5 - Urbanização ')
     st.text('3 - Florestas')
 
 with col2_1:
@@ -175,7 +175,7 @@ else:
     st.write('Area de Perda Florestal:')
     st.text(year)
     area_estado = data_year['area_ha'].loc[data_year['nome'] == estado].values[0]
-    st.write(area_estado)
+    st.text(area_estado)
 
     #Pie Chart
     st.write('Porcentagem me relação ao país:')
