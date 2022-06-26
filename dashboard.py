@@ -137,6 +137,7 @@ with col1_2:
   with st.expander ('Principais Causas de Perda Florestal') :
     st.text(year)
     st.write(fig5)
+    st.text("1 - Commodities /n 2 - Agricultura Itinerante /n 3 - Florestas /n 4 - Queimadas /n 5 - Urbanização")
 
 with col2_1:
   with st.expander ('Dados:') :
