@@ -126,9 +126,10 @@ urbanizacao = drivers.loc[5].values[0]
 
 labels=['Commodities','Agricultura Itinerante','Floresta','Queimadas','Urbanização']
 sizes = [commodities,itinerant,floresta,queimadas,urbanizacao]
+colors = ['#980043','#dd1c77','#df65b0','#c994c7','#d4b9da']
 
 fig5, ax5 = plt.subplots()
-ax5.pie(sizes, labels=labels, autopct='%1.1f%%',shadow=False, startangle=90,colors='PuRd')
+ax5.pie(sizes, labels=labels, autopct='%1.1f%%',shadow=False, startangle=90,colors=colors)
 ax5.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig5)
 
