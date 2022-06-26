@@ -131,17 +131,19 @@ colors = ['#980043','#dd1c77','#df65b0','#c994c7','#d4b9da']
 fig5, ax5 = plt.subplots()
 ax5.pie(sizes, labels=labels, autopct='%1.1f%%',shadow=False, startangle=90,colors=colors)
 ax5.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-col1_2, col2_1 =  st.columns([2,1])
+
+
+col1_2, col2_2 =  st.columns([2,1])
 
 with col1_2:
-  with st.expander ('Principais Causas de Perda Florestal') :
+  with st.expander ('Principais Causas de Perda Florestal Brasileira') :
     st.text(year)
     st.write(fig5)
     st.text('1 - Commodities               4 - Queimadas')
     st.text('2 - Agricultura Itinerante    5 - Urbanização ')
     st.text('3 - Florestas')
 
-with col2_1:
+with col2_2:
   with st.expander ('Dados:') :
     st.write(drivers)
 #Estados Map
@@ -207,4 +209,7 @@ else:
   with st.expander ('Evolução da Perda florestal nos Anos:') :
     st.write(estado)
     st.write(fig4)
-  
+
+#Pie for dominat Drivers Estados
+estado_drivers = data_drivers.loc[(data_drivers['id'] == index_estados) & (data_drivers['year'] == year),['id'.'area_ha']].groupby('id').sum()
+st.write(estado_drivers)
