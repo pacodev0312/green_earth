@@ -131,15 +131,16 @@ colors = ['#980043','#dd1c77','#df65b0','#c994c7','#d4b9da']
 fig5, ax5 = plt.subplots()
 ax5.pie(sizes, labels=labels, autopct='%1.1f%%',shadow=False, startangle=90,colors=colors)
 ax5.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-st.pyplot(fig5)
+col1_2, col2_1 =  st.columns([2,1])
 
-#labels = data_drivers['year'].unique().tolist()
-#commodities = 
-#women_means = [25, 32, 34, 20, 25]
-#men_std = [2, 3, 4, 1, 2]
-#women_std = [3, 5, 2, 3, 3]
-#width = 0.35 
+with col1_2:
+  with st.expander ('Principais Causas de Perda Florestal') :
+    st.write(year)
+    st.write(fig5)
 
+with col2_1:
+  with st.expander ('Dados:') :
+    st.write(drivers)
 #Estados Map
 estado = ''
 for i in estados:
