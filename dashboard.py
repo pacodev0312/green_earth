@@ -116,11 +116,11 @@ with st.expander ('Perda Florestal Brasileira ao longo dos Anos') :
   st.write(fig1)
 
 # Creating Chart By Dominant Driver:
-drivers = data_drivers.loc[data_drivers['year'] == year,['dominant_driver','area_ha']].groupby('dominant_driver').sum()
+drivers = data_drivers[['dominant_driver','area_ha','year']].loc[data_drivers['year'] == year].groupby('dominant_driver').sum()
 
 #area_drivers_total = drivers['area_ha'].sum()
-commodities = drivers.loc[0]
-st.write(commodities)
+#commodities = drivers.loc[0]
+st.write(drivers)
 #itinerant = drivers.loc[drivers['dominant_driver'] == 2,'area_ha']
 #floresta = drivers.loc[drivers['dominant_driver'] == 3,'area_ha']
 #queimadas = drivers.loc[drivers['dominant_driver'] == 4,'area_ha']
