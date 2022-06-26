@@ -210,6 +210,3 @@ else:
     st.write(estado)
     st.write(fig4)
 
-  #Pie for dominat Drivers Estados
-  estado_drivers = data_drivers.loc[(data_drivers['id'] == index_estados) & (data_drivers['year'] == year),['id','area_ha']].groupby('id').sum()
-  st.write(estado_drivers)
